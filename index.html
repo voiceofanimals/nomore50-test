@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<script>
+function 
+sendemail()
+{
+    var body ="Shri Narendra Modi Ji," + "\n";
+    body += "Prime Minister of India" + "\n" + "\n" + "\n";
+    body += "Incidences of cruelty to animals in India, each more shocking than the last, are frequently reported by media outlets. Dogs are poisoned, cows have been burned with acid, and countless other animals across the country are abused every day.  Yet people convicted of such crimes often only pay a paltry Rs 50 fine – the maximum penalty for a first offence of animal abuse under The Prevention of Cruelty to Animals Act, 1960. Please help prevent violence against animals by strengthening India's animal protection laws and penalties for abusers. " + "\n" +"\n";
+    body += "I respectfully ask that you show that cruelty to animals won't be tolerated by ensuring that people found guilty of it receive jail time, significant fines, and counselling and are forbidden to have contact with animals." + "\n" +"\n";
+    body += "Thank you for your attention to this important matter. " + "\n" +"\n";
+    body += "Yours sincerely," + "\n" +"\n" +"\n";
+    body +=  document.getElementById("name").value + "\n";
+    body +=  document.getElementById("contact").value + "\n";
+    body += document.getElementById("address").value;
+
+    var subject = "India's Animals Are Suffering Because of Weak Penalties for Cruelty";
+    var address = "info@petaindi.com";
+    var cc_address = "animalwelfareboar@gmail.com,test@petaindia.com";
+    var bcc_address = "animalgrievances@gmail.com";
+
+    var location = "mailto:" + address + "?" + "cc=" + cc_address + "&bcc=" + bcc_address + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    
+    window.location.href = location;
+}
+</script>
+
+<link rel="stylesheet" href="formstylesheet.css">
+<script src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="login-page">
+<div><h2>NoMore50</h2></div>
+<div class="form">
+<form action="javascript: sendemail()">
+
+
+
+<textarea readonly rows="7" input id="issues" type="text" name="issues">
+    Incidences of cruelty to animals in India, each more shocking than the last, are frequently reported by media outlets. Dogs are poisoned, cows have been burned with acid, and countless other animals across the country are abused every day.
+
+Yet people convicted of such crimes often only pay a paltry Rs 50 fine – the maximum penalty for a first offence of animal abuse under The Prevention of Cruelty to Animals Act, 1960. 
+
+Please help prevent violence against animals by strengthening India's animal protection laws and penalties for abusers. I respectfully ask that you show that cruelty to animals won't be tolerated by ensuring that people found guilty of it receive jail time, significant fines, and counselling and are forbidden to have contact with animals.
+
+Thank you for your attention to this important matter. 
+</textarea>
+<br>
+
+
+Your Name:<br>
+<input id="name" type="text" name="name" required>
+<br>
+
+Contact Number:<br>
+<input id="contact" type="number" name="contact" required>
+<br>
+    
+Address:<br>
+<textarea rows="2" input id="address" type="text" name="issues" required>
+</textarea><br>
+
+<br><br>
+<button type="submit" value="Submit">SUBMIT</button>
+</form>
+</div>
+</div>
+
+</body>
+</html>
